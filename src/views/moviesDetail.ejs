@@ -17,9 +17,21 @@
     <p>AWARDS: <%= movie.awards %> </p>
     <p>LENGTH: <%= movie.length + ' min'%> </p>
     <p>RELEASE DATE: <%= movie.release_date %> </p>
+    <p>genre: <%= movie.genre %> </p>
     <br>
-    <section>
+    <section class="edit-section-form">
         <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
+            <form action="/movies/edit/<%= movie.id %>" method="GET">
+                <button class="botonAgregar" type="submit">
+                    Modificar
+                </button>
+            </form>
+            
+            <a href="/movies/delete/<%= movie.id %>" >
+                <button class="botonBorrar">
+                    Borrar
+                </button>
+            </a>
     </section>
 
 </body>
